@@ -64,6 +64,25 @@ void merge_sort(std::vector<int> &array){
 
 }
 
+void merge_and_insertion_sort_helper(std::vector<int> &array, int start, int end, int k){
+
+	if(array.size() <= k)
+		insertion_sort(array);
+
+	else
+		merge_sort(array);
+	
+
+}
+
+void merge_and_insertion_sort(std::vector<int> &array, int k){
+
+	merge_and_insertion_sort_helper(array, 0, array.size() - 1, k);
+	
+
+}
+
+
 
 
 
